@@ -40,12 +40,12 @@ def main(folder: Path):
     for file in parser.SVG_IMEGS:
         handle_madia(file, folder / 'images' / 'SVG')
     for file in parser.MP3_AUDIO:
-        handle_madia(file, folder / 'audio' / 'PM3')
+        handle_madia(file, folder / 'audio' / 'MP3')
 
     for file in parser.MY_OTHER:
-        handle_madia(file, folder / 'MY_OTHER')
-    for file in parser.ARCHIVE:
-        handle_madia(file, folder / 'ARCHIVE')
+        handle_other(file, folder / 'MY_OTHER')
+    for file in parser.ARCHIVES:
+        handle_archive(file, folder / 'ARCHIVES')
 
     for folder in parser.FOLDERS[::-1]:
         handel_folder(folder)
@@ -53,5 +53,4 @@ def main(folder: Path):
 if __name__ == "__main__":
     if sys.argv[1]:
         folder_for_scan = Path(sys.argv[1])
-        print(f"Start in folder {folder_for_scan.resolve()}")
         main(folder_for_scan.resolve())

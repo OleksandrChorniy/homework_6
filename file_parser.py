@@ -23,9 +23,9 @@ EXTENSION = set()
 UNKNOWN = set()
 
 def get_extension(filename: str) -> str:
-    return Path(filename).suffix.upper()
+    return Path(filename).suffix[1:].upper()
 
-def scan(folder: Path) -> None:
+def scan(folder: Path) -> None: 
     for item in folder.iterdir():
         if item.is_dir():
             if item.name not in ('archives', 'video', 'audio', 'documents', 'images', 'MY_OTHER'):
