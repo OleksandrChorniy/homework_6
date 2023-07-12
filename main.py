@@ -6,11 +6,11 @@ from normalize import normalize
 
 def handle_madia(filename: Path, target_folder: Path) -> None:
     target_folder.mkdir(exist_ok=True, parents=True)
-    filename.replace(target_folder / normalize(filename))
+    filename.replace(target_folder / normalize(filename.name))
 
 def handle_other(filename: Path, target_folder: Path) -> None:
     target_folder.mkdir(exist_ok=True, parents=True)
-    filename.replace(target_folder / normalize(filename))
+    filename.replace(target_folder / normalize(filename.name))
 
 def handle_archive(filename: Path, target_folder: Path) -> None:
     target_folder.mkdir(exist_ok=True, parents=True)
