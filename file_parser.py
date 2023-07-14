@@ -1,20 +1,32 @@
 import sys
 from pathlib import Path
 
-JPEG_IMEGS = []
-JPG_IMEGS = []
-PNG_IMEGS = []
-SVG_IMEGS = []
+JPEG_IMG = []
+JPG_IMG = []
+PNG_IMG = []
+SVG_IMG = []
 MP3_AUDIO = []
+TXT_DOCUMENTS = []
+XLSX_DOCUMENTS = []
+DOC_DOCUMENTS = []
+AVI_VIDEO = []
+MOV_VIDEO = []
+MP4_VIDEO = []
 MY_OTHER = []
 ARCHIVES = []
 
 REGISTER_EXTENSION = {
-    'JPEG': JPEG_IMEGS,
-    'JPG': JPG_IMEGS,
-    'PNG': PNG_IMEGS,
-    'SVG': SVG_IMEGS,
+    'JPEG': JPEG_IMG,
+    'JPG': JPG_IMG,
+    'PNG': PNG_IMG,
+    'SVG': SVG_IMG,
     'MP3': MP3_AUDIO,
+    'TXT': TXT_DOCUMENTS,
+    'XLSX': XLSX_DOCUMENTS,
+    'DOC': DOC_DOCUMENTS,
+    'AVI': AVI_VIDEO,
+    'MOV': MOV_VIDEO,
+    'MP4': MP4_VIDEO,
     'ZIP': ARCHIVES  
 }
 
